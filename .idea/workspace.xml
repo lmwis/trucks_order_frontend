@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="150a5470-9429-4400-99d0-05f3507a276e" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/trucks_order.iml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/css/index.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/css/index.ts" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/driver_login_page.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/home_page.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/home_page_index.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/images/页面1图片/logo.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/images/页面1图片/为什么选择此平台图片/图片1.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/images/页面1图片/为什么选择此平台图片/图片2.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/images/页面1图片/为什么选择此平台图片/图片3.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/images/页面1图片/为什么选择此平台图片/图片4.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/images/页面1图片/我的中心.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/images/页面1图片/轮播图/01.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/images/页面1图片/轮播图/02.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/images/页面1图片/轮播图/03.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/images/页面2图片/logo.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/images/页面2图片/logo2.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/images/页面2图片/图片1.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/images/页面2图片/图片2.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/images/页面2图片/图片3.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/images/页面2图片/我的中心.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/images/页面3图片/logo.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/images/页面3图片/logo2.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/images/页面3图片/我的中心.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/images/页面3图片/注册押金图片.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/images/页面3图片/背景图.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/images/页面4图片/logo.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/images/页面4图片/叫车.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/images/页面4图片/图片1.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/images/页面4图片/图片2.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/images/页面4图片/图片3.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/images/页面4图片/图片4.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/images/页面4图片/图片5.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/images/页面4图片/我的中心.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/images/页面5图片/logo.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/images/页面5图片/我的中心.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/images/页面6图片/logo.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/images/页面6图片/我的中心.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/img/wen3(1).jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/img/wen3(2).jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/img/wen3(3).jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/img/wen3(4).jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/img/wen3(5).jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/img/wen3(6).jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/img/wen3(7).jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/bootstrap/dist/css/bootstrap-theme.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/bootstrap/dist/css/bootstrap-theme.css.map" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/bootstrap/dist/css/bootstrap-theme.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/bootstrap/dist/css/bootstrap-theme.min.css.map" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/bootstrap/dist/css/bootstrap.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/bootstrap/dist/css/bootstrap.css.map" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/bootstrap/dist/css/bootstrap.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/bootstrap/dist/css/bootstrap.min.css.map" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/bootstrap/dist/fonts/glyphicons-halflings-regular.eot" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/bootstrap/dist/fonts/glyphicons-halflings-regular.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/bootstrap/dist/fonts/glyphicons-halflings-regular.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/bootstrap/dist/fonts/glyphicons-halflings-regular.woff" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/bootstrap/dist/js/bootstrap.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/bootstrap/dist/js/bootstrap.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/bootstrap/dist/js/jquery-3.2.1.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/bootstrap/dist/js/npm.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/common.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/component.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/index.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/jquery-3.2.1.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/css/layui.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/css/layui.mobile.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/css/modules/code.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/css/modules/laydate/default/laydate.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/css/modules/layer/default/icon-ext.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/css/modules/layer/default/icon.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/css/modules/layer/default/layer.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/css/modules/layer/default/loading-0.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/css/modules/layer/default/loading-1.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/css/modules/layer/default/loading-2.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/font/iconfont.eot" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/font/iconfont.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/font/iconfont.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/font/iconfont.woff" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/images/face/0.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/images/face/1.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/images/face/10.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/images/face/11.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/images/face/12.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/images/face/13.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/images/face/14.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/images/face/15.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/images/face/16.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/images/face/17.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/images/face/18.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/images/face/19.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/images/face/2.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/images/face/20.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/images/face/21.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/images/face/22.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/images/face/23.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/images/face/24.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/images/face/25.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/images/face/26.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/images/face/27.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/images/face/28.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/images/face/29.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/images/face/3.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/images/face/30.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/images/face/31.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/images/face/32.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/images/face/33.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/images/face/34.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/images/face/35.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/images/face/36.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/images/face/37.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/images/face/38.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/images/face/39.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/images/face/4.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/images/face/40.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/images/face/41.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/images/face/42.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/images/face/43.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/images/face/44.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/images/face/45.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/images/face/46.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/images/face/47.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/images/face/48.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/images/face/49.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/images/face/5.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/images/face/50.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/images/face/51.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/images/face/52.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/images/face/53.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/images/face/54.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/images/face/55.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/images/face/56.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/images/face/57.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/images/face/58.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/images/face/59.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/images/face/6.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/images/face/60.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/images/face/61.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/images/face/62.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/images/face/63.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/images/face/64.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/images/face/65.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/images/face/66.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/images/face/67.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/images/face/68.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/images/face/69.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/images/face/7.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/images/face/70.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/images/face/71.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/images/face/8.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/images/face/9.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/lay/modules/carousel.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/lay/modules/code.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/lay/modules/colorpicker.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/lay/modules/element.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/lay/modules/flow.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/lay/modules/form.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/lay/modules/jquery.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/lay/modules/laydate.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/lay/modules/layedit.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/lay/modules/layer.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/lay/modules/laypage.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/lay/modules/laytpl.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/lay/modules/mobile.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/lay/modules/rate.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/lay/modules/slider.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/lay/modules/table.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/lay/modules/tree.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/lay/modules/upload.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/lay/modules/util.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/layui/layui.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/request.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/vue.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/my_center.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/online_order.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/user_info.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/user_login_page.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/user_order.html" />
+    </list>
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="home_page.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/home_page.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="9" column="75" lean-forward="false" selection-start-line="9" selection-start-column="75" selection-end-line="9" selection-end-column="75" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user_login_page.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/user_login_page.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="159" column="45" lean-forward="false" selection-start-line="159" selection-start-column="45" selection-end-line="159" selection-end-column="45" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="my_center.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/my_center.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="18" column="32" lean-forward="false" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="request.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/request.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-950">
+              <caret line="19" column="33" lean-forward="false" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="5" lean-forward="true" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="vue.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/vue.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="725">
+              <caret line="33" column="5" lean-forward="false" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="common.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/common.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="14" column="28" lean-forward="false" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="component.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/component.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="jquery-3.2.1.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/jquery-3.2.1.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/user_login_page.html" />
+        <option value="$PROJECT_DIR$/home_page.html" />
+        <option value="$PROJECT_DIR$/js/request.js" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="trucks_order" type="b2602c69:ProjectViewProjectNode" />
+              <item name="trucks_order" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="trucks_order" type="b2602c69:ProjectViewProjectNode" />
+              <item name="trucks_order" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="150a5470-9429-4400-99d0-05f3507a276e" name="Default" comment="" />
+      <created>1621944169288</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1621944169288</updated>
+      <workItem from="1621944170505" duration="2614000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="2614000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24973656" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/driver_login_page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="8" column="68" lean-forward="false" selection-start-line="8" selection-start-column="68" selection-end-line="8" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user_login_page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="159" column="45" lean-forward="false" selection-start-line="159" selection-start-column="45" selection-end-line="159" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my_center.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="18" column="32" lean-forward="false" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/home_page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="9" column="75" lean-forward="false" selection-start-line="9" selection-start-column="75" selection-end-line="9" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/vue.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="725">
+          <caret line="33" column="5" lean-forward="false" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/component.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="14" column="28" lean-forward="false" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/jquery-3.2.1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/request.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-950">
+          <caret line="19" column="33" lean-forward="false" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="5" lean-forward="true" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
