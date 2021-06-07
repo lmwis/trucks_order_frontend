@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <title>共享货车--首页</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
     <script type="text/javascript" src="js/jquery-3.2.1.js"></script>
-    <link type="text/css" href="js/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
-    <link type="text/css" href="js/layui/css/layui.css" rel="stylesheet" />
+    <link type="text/css" href="js/bootstrap/dist/css/bootstrap.css" rel="stylesheet"/>
+    <link type="text/css" href="js/layui/css/layui.css" rel="stylesheet"/>
     <script type="text/javascript" src="js/bootstrap/dist/js/bootstrap.js"></script>
     <script type="text/javascript" src="js/vue.js"></script>
     <script type="text/javascript" src="js/request.js"></script>
@@ -16,26 +16,37 @@
     <script src="https://cdn.staticfile.org/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
     <script type="text/javascript" src="js/layui/layui.js"></script>
     <script type="text/javascript">
-        $(function(){
-           var app = new Vue({
-               el:".header",
-               methods:{
-                   userLogin:function () {
-                       $($(".layui-nav-item")[0]).removeClass("layui-this");
-                       $($(".layui-nav-item")[1]).addClass("layui-this");
-                        $("#content").attr("src","user_login_page.html");
-                   },
-                   driverLogin:function () {
-                       $("#content").attr("src","driver_login_page.html");
-                   },
-                   onlineOrderPage:function () {
-                       $("#content").attr("src","online_order.html");
-                   },
-                   myOrder:function () {
-                       $("#content").attr("src","my_center.html");
-                   }
-               }
-           });
+        $(function () {
+            let user_id = $.cookie('user_id');
+            if (user_id != 'undefined') {
+                $('#loginName').html(user_id);
+            }
+            var app = new Vue({
+                el: ".header",
+                methods: {
+                    userLogin: function () {
+                        $($(".layui-nav-item")[0]).removeClass("layui-this");
+                        $($(".layui-nav-item")[1]).addClass("layui-this");
+                        $("#content").attr("src", "user_login_page.html");
+                    },
+                    driverLogin: function () {
+                        $("#content").attr("src", "driver_login_page.html");
+                    },
+                    onlineOrderPage: function () {
+                        $("#content").attr("src", "online_order.html");
+                    },
+                    myOrder: function () {
+                        $("#content").attr("src", "my_center.html");
+                    },
+                    quitLogin: function () {
+                        const r = confirm('确认退出当前用户？')
+                        if(r){
+                            $.cookie('user_id', '', {expires: -1}); // 删除cookie
+                            window.location.reload();
+                        }
+                    }
+                }
+            });
         });
     </script>
 </head>
@@ -44,24 +55,26 @@
     <div style="float:left;margin:18px"><img src="images/页面1图片/logo.jpg" alt="" height="24px"></div>
     <ul class="nav layui-nav" lay-filter="">
         <li class="layui-nav-item layui-this"><a href="home_page.html"><span>首页</span></a></li>
-        <li class="layui-nav-item"><a href="#" v-on:click.stop="userLogin" ><span>用户加入</span></a></li>
+        <li class="layui-nav-item"><a href="#" v-on:click.stop="userLogin"><span>用户加入</span></a></li>
         <li class="layui-nav-item"><a href="#" v-on:click.stop="driverLogin"><span>司机加入</span></a></li>
         <li class="layui-nav-item"><a href="#" v-on:click.stop="onlineOrderPage"><span>在线下单</span></a></li>
         <li class="layui-nav-item"><a href=""><span>司机接单</span></a></li>
     </ul>
     <ul class="self layui-nav" lay-filter="">
         <li class="layui-nav-item">
-            <a href=""><div class=" glyphicon glyphicon-user my-center"></div></a>
+            <a href="">
+                <div class=" glyphicon glyphicon-user my-center"></div>
+            </a>
             <dl class="layui-nav-child">
-                <dd><a v-on:click.stop="userLogin" href="javascript:;">登录</a></dd>
+                <dd><a id="loginName" v-on:click.stop="userLogin" href="javascript:;">登录</a></dd>
                 <dd><a v-on:click.stop="myOrder" href="#">我的订单</a></dd>
-                <dd><a href="javascript:;">退出登录</a></dd>
+                <dd><a v-on:click.stop="quitLogin" href="#">退出登录</a></dd>
             </dl>
         </li>
     </ul>
     <script type="text/javascript">
         //注意：导航 依赖 element 模块，否则无法进行功能性操作
-        layui.use('element', function(){
+        layui.use('element', function () {
             var element = layui.element;
 
             //…

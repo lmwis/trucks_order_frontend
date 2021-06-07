@@ -2,13 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title><meta charset="UTF-8">
+    <title>Title</title>
+    <meta charset="UTF-8">
     <title>共享货车--司机登陆</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
     <script type="text/javascript" src="js/jquery-3.2.1.js"></script>
-    <link type="text/css" href="js/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
-    <link type="text/css" href="js/layui/css/layui.css" rel="stylesheet" />
+    <link type="text/css" href="js/bootstrap/dist/css/bootstrap.css" rel="stylesheet"/>
+    <link type="text/css" href="js/layui/css/layui.css" rel="stylesheet"/>
     <script type="text/javascript" src="js/bootstrap/dist/js/bootstrap.js"></script>
     <script type="text/javascript" src="js/vue.js"></script>
     <script type="text/javascript" src="js/request.js"></script>
@@ -17,156 +18,169 @@
     <script type="text/javascript" src="js/layui/layui.js"></script>
     <script type="text/javascript">
         $(function () {
+            const uploadUrl = Ajax.urlPre + 'imgs/upload_img';
             var app = new Vue({
-                el:"#register-form",
-                data:{
-                    name:"",
-                    sex:"",
-                    age:"",
-                    tel:"",
-                    img1_path:"",
-                    img2_path:"",
-                    img3_path:"",
-                    img4_path:"",
-                    img5_path:"",
-                    password:"",
-                    passwordAgain:""
+                el: "#register-form",
+                data: {
+                    name: "",
+                    sex: "",
+                    age: "",
+                    tel: "",
+                    img1_path: "",
+                    img2_path: "",
+                    img3_path: "",
+                    img4_path: "",
+                    img5_path: "",
+                    password: "",
+                    passwordAgain: "",
+
                 },
-                methods:{
-                    register:function () {
-                        if(this.name==""||this.sex==""||this.age==""||this.tel==""||this.img1_path==""||this.img2_path==""||
-                            this.img3_path==""||this.img4_path==""||this.img5_path==""||this.password==""||this.passwordAgain==""){
-                            layui.use('layer', function(){
+                methods: {
+                    register: function () {
+                        if (this.name == "" || this.sex == "" || this.age == "" || this.tel == "" || this.img1_path == "" || this.img2_path == "" ||
+                            this.img3_path == "" || this.img4_path == "" || this.img5_path == "" || this.password == "" || this.passwordAgain == "") {
+                            layui.use('layer', function () {
                                 var layer = layui.layer;
                                 layer.msg("不能为空");
                             });
                             return;
                         }
-                        Ajax.driverRegister(this.name,this.sex,this.age,this.tel,this.img1_path,this.img2_path,
-                            this.img3_path,this.img4_path,this.img5_path,this.password,this.passwordAgain)
+                        Ajax.driverRegister(this.name, this.sex, this.age, this.tel, this.img1_path, this.img2_path,
+                            this.img3_path, this.img4_path, this.img5_path, this.password, this.passwordAgain)
 
+                    },
+                    toLoginForm:function () {
+                        $(".form_driver").fadeOut("default",function () {
+                            $(".form_driver2").fadeIn();
+                        });
+                    },
+                    toRegisterForm:function () {
+                        $(".form_driver2").fadeOut("default",function () {
+                            $(".form_driver").fadeIn();
+                        });
                     }
                 }
             });
-            layui.use('upload', function(){
+            layui.use('upload', function () {
                 var upload = layui.upload;
                 //执行实例
                 var uploadInst = upload.render({
                     elem: '#idCard' //绑定元素
-                    ,url: '/upload/img' //上传接口
-                    ,done: function(res){//上传完毕回调
-                        if(res.status=="success"){
-                            imgPath = res.data;
-                        }else{
-                            layui.use('layer', function(){
+                    // ,url: Ajax.urlPre+'upload/img' //上传接口
+                    , url: uploadUrl //上传接口
+                    , done: function (res) {//上传完毕回调
+                        if (res.status == "success") {
+                            app.img1_path = res.data;
+                        } else {
+                            layui.use('layer', function () {
                                 var layer = layui.layer;
                                 layer.msg(res.data.errMsg);
                             });
                         }
                     }
-                    ,error: function(){
+                    , error: function () {
                         //请求异常回调
-                        layui.use('layer', function(){
+                        layui.use('layer', function () {
                             var layer = layui.layer;
                             layer.msg("系统或网络出错");
                         });
                     }
                 });
             });
-            layui.use('upload', function(){
+            layui.use('upload', function () {
                 var upload = layui.upload;
                 //执行实例
                 var uploadInst = upload.render({
                     elem: '#driverEqual' //绑定元素
-                    ,url: '/upload/img' //上传接口
-                    ,done: function(res){//上传完毕回调
-                        if(res.status=="success"){
-                            imgPath = res.data;
-                        }else{
-                            layui.use('layer', function(){
+                    , url: uploadUrl //上传接口
+                    , done: function (res) {//上传完毕回调
+                        if (res.status == "success") {
+                            app.img2_path = res.data;
+                        } else {
+                            layui.use('layer', function () {
                                 var layer = layui.layer;
                                 layer.msg(res.data.errMsg);
                             });
                         }
                     }
-                    ,error: function(){
+                    , error: function () {
                         //请求异常回调
-                        layui.use('layer', function(){
+                        layui.use('layer', function () {
                             var layer = layui.layer;
                             layer.msg("系统或网络出错");
                         });
                     }
                 });
             });
-            layui.use('upload', function(){
+            layui.use('upload', function () {
                 var upload = layui.upload;
                 //执行实例
                 var uploadInst = upload.render({
                     elem: '#carEqual' //绑定元素
-                    ,url: '/upload/img' //上传接口
-                    ,done: function(res){//上传完毕回调
-                        if(res.status=="success"){
-                            imgPath = res.data;
-                        }else{
-                            layui.use('layer', function(){
+                    , url: uploadUrl //上传接口
+                    , done: function (res) {//上传完毕回调
+                        if (res.status == "success") {
+                            app.img3_path = res.data;
+                        } else {
+                            layui.use('layer', function () {
                                 var layer = layui.layer;
                                 layer.msg(res.data.errMsg);
                             });
                         }
                     }
-                    ,error: function(){
+                    , error: function () {
                         //请求异常回调
-                        layui.use('layer', function(){
+                        layui.use('layer', function () {
                             var layer = layui.layer;
                             layer.msg("系统或网络出错");
                         });
                     }
                 });
             });
-            layui.use('upload', function(){
+            layui.use('upload', function () {
                 var upload = layui.upload;
                 //执行实例
                 var uploadInst = upload.render({
                     elem: '#carInsurance' //绑定元素
-                    ,url: '/upload/img' //上传接口
-                    ,done: function(res){//上传完毕回调
-                        if(res.status=="success"){
-                            imgPath = res.data;
-                        }else{
-                            layui.use('layer', function(){
+                    , url: uploadUrl //上传接口
+                    , done: function (res) {//上传完毕回调
+                        if (res.status == "success") {
+                            app.img4_path = res.data;
+                        } else {
+                            layui.use('layer', function () {
                                 var layer = layui.layer;
                                 layer.msg(res.data.errMsg);
                             });
                         }
                     }
-                    ,error: function(){
+                    , error: function () {
                         //请求异常回调
-                        layui.use('layer', function(){
+                        layui.use('layer', function () {
                             var layer = layui.layer;
                             layer.msg("系统或网络出错");
                         });
                     }
                 });
             });
-            layui.use('upload', function(){
+            layui.use('upload', function () {
                 var upload = layui.upload;
                 //执行实例
                 var uploadInst = upload.render({
                     elem: '#carLicense' //绑定元素
-                    ,url: '/upload/img' //上传接口
-                    ,done: function(res){//上传完毕回调
-                        if(res.status=="success"){
-                            imgPath = res.data;
-                        }else{
-                            layui.use('layer', function(){
+                    , url: uploadUrl //上传接口
+                    , done: function (res) {//上传完毕回调
+                        if (res.status == "success") {
+                            app.img5_path = res.data;
+                        } else {
+                            layui.use('layer', function () {
                                 var layer = layui.layer;
                                 layer.msg(res.data.errMsg);
                             });
                         }
                     }
-                    ,error: function(){
+                    , error: function () {
                         //请求异常回调
-                        layui.use('layer', function(){
+                        layui.use('layer', function () {
                             var layer = layui.layer;
                             layer.msg("系统或网络出错");
                         });
@@ -192,29 +206,33 @@
                 <li>
                     <div class="input-group">
                         <span class="input-group-addon" id="basic-addon1">姓名</span>
-                        <input type="text" class="form-control" placeholder="姓名" aria-describedby="basic-addon1" v-model="name">
+                        <input type="text" class="form-control" placeholder="姓名" aria-describedby="basic-addon1"
+                               v-model="name">
                     </div>
                 </li>
                 <li>
                     <div class="input-group">
                         <span class="input-group-addon" id="basic-addon2">性别</span>
-                        <input type="text" class="form-control" placeholder="性别" aria-describedby="basic-addon1" v-model="sex">
+                        <input type="text" class="form-control" placeholder="性别" aria-describedby="basic-addon1"
+                               v-model="sex">
                     </div>
                 </li>
                 <li>
                     <div class="input-group">
                         <span class="input-group-addon" id="basic-addon3">年龄</span>
-                        <input type="email" class="form-control" placeholder="年龄" aria-describedby="basic-addon1" v-model="age">
+                        <input type="email" class="form-control" placeholder="年龄" aria-describedby="basic-addon1"
+                               v-model="age">
                     </div>
                 </li>
                 <li>
                     <div class="input-group">
                         <span class="input-group-addon" id="basic-addon4">电话</span>
-                        <input type="text" class="form-control" placeholder="电话" aria-describedby="basic-addon1" v-model="tel">
+                        <input type="text" class="form-control" placeholder="电话" aria-describedby="basic-addon1"
+                               v-model="tel">
                     </div>
                 </li>
                 <li>
-                    <button type="button" class="layui-btn" id="idCard" style="width:360px" >
+                    <button type="button" class="layui-btn" id="idCard" style="width:360px">
                         <i class="layui-icon">&#xe67c;</i>身份证照片上传
                     </button>
                 </li>
@@ -224,7 +242,7 @@
                     </button>
                 </li>
                 <li>
-                    <button type="button" class="layui-btn upload-img"  id="carEqual">
+                    <button type="button" class="layui-btn upload-img" id="carEqual">
                         <i class="layui-icon">&#xe67c;</i>营运车辆营运许可证上传
                     </button>
                 </li>
@@ -234,33 +252,72 @@
                     </button>
                 </li>
                 <li>
-                    <button type="button" class="layui-btn upload-img" id="carLicense" style="margin-bottom:10px" >
+                    <button type="button" class="layui-btn upload-img" id="carLicense" style="margin-bottom:10px">
                         <i class="layui-icon">&#xe67c;</i>车辆行驶证照片上传
                     </button>
                 </li>
                 <li>
                     <div class="input-group">
                         <span class="input-group-addon" id="basic-addon5">密码</span>
-                        <input type="text" class="form-control" placeholder="密码" aria-describedby="basic-addon1" v-model="password">
+                        <input type="text" class="form-control" placeholder="密码" aria-describedby="basic-addon1"
+                               v-model="password">
                     </div>
                 </li>
                 <li>
                     <div class="input-group">
                         <span class="input-group-addon" id="basic-addon6">确认密码</span>
-                        <input type="text" class="form-control" placeholder="确认密码" aria-describedby="basic-addon1" v-model="passwordAgain">
+                        <input type="text" class="form-control" placeholder="确认密码" aria-describedby="basic-addon1"
+                               v-model="passwordAgain">
                     </div>
                 </li>
-                
+
                 <li>
                     <div class="btn-group register-button" role="group" aria-label="...">
                         <button class="btn btn-default" type="button" value="注册" v-on:click="register">注册</button>
                     </div>
                 </li>
                 <li>
-                    <div style="font-size:18px;padding-top:10px;color:#000000"><a href="#" style="color:black" v-on:click="toLoginForm">已有账号？马上登录</a></div>
+                    <div style="font-size:18px;padding-top:10px;color:#000000"><a href="#" style="color:black" v-on:click="toLoginForm">已有账号？马上登录</a>
+                    </div>
                 </li>
             </ul>
         </div>
+    </div>
+    <div class="form_driver2" style="display:none">
+        <div id="login-form">
+            <ul>
+                <li>
+                    <div class="logo2">
+                        <h3>登录</h3>
+                    </div>
+                </li>
+                <li>
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon6">请输入邮箱</span>
+                        <input type="email" class="form-control" placeholder="email" aria-describedby="basic-addon1" v-model="login_email">
+                    </div>
+                </li>
+                <li>
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon7">请输入密码</span>
+                        <input type="text" class="form-control" placeholder="password" aria-describedby="basic-addon1" v-model="login_password">
+                    </div>
+                </li>
+                <li>
+                    <div class="btn-group register-button" role="group" aria-label="...">
+                        <button class="btn btn-default" type="button" value="登录" v-on:click="login">登录</button>
+                    </div>
+                </li>
+                <li>
+                    <div style="font-size:18px;padding-top:10px;color:#000000" v-on:click="toRegisterForm"><a href="#" style="color:black">没有账号？点击注册</a></div>
+                </li>
+            </ul>
+        </div>
+        <!--<div id="login-form">-->
+        <!--<input type="text" v-model="email">-->
+        <!--<input type="text" v-model="password">-->
+        <!--<button type="button" value="登录" v-on:click="login" >登录</button>-->
+        <!--</div>-->
     </div>
 </div>
 <script type="text/javascript">

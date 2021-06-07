@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="css/index.css" />
     <script type="text/javascript" src="js/jquery-3.2.1.js"></script>
     <link type="text/css" href="js/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <script src="https://cdn.staticfile.org/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
     <link type="text/css" href="js/layui/css/layui.css" rel="stylesheet" />
     <script type="text/javascript" src="js/bootstrap/dist/js/bootstrap.js"></script>
     <script type="text/javascript" src="js/vue.js"></script>
@@ -61,7 +62,7 @@
                             return;
                         }
                         //异步注册
-                        Ajax.register(this.nickname,this.email,this.password);
+                        Ajax.register(this.nickname,this.email,this.password,'user');
                     },
                     login:function () {
                         if(this.login_email.length<=0 || this.login_password.length<=0){

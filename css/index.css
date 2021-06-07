@@ -78,6 +78,18 @@
     background:grey;
     text-align:center;
 }
+.form_driver2{
+    border-radius:5%;
+    opacity:0.8;
+    padding-top:10px;
+    position:relative;
+    top:-730px;
+    left:1000px;
+    width:400px;
+    height:430px;
+    background:grey;
+    text-align:center;
+}
 .form2{
     border-radius:5%;
     opacity:0.8;
