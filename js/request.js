@@ -32,9 +32,9 @@ var Ajax = {
     },
     driverRegister: function (name, sex, age, tel, img1_path, img2_path,
                               img3_path, img4_path, img5_path, password, passwordAgain) {
-        if (nickname.length == 0 || email.length == 0 || password.length == 0) {
-            return;
-        }
+        // if (nickname.length == 0 || email.length == 0 || password.length == 0) {
+        //     return;
+        // }
         var url = this.urlPre + "/driver/register";
         var data = {
             name: name,
@@ -62,7 +62,6 @@ var Ajax = {
                 } else if (res.status == "fail") {
                     alert("注册失败：" + res.data.errMsg);
                 }
-                z
             }
         });
 
@@ -92,8 +91,13 @@ var Ajax = {
                 console.log(res);
                 if (res.status === "success") {
                     alert("登录成功");
-                    $.cookie('user_id',res.data.userId);
-                    window.location.href='user_info.html';
+                    if(type === 'user'){
+                        $.cookie('user_id',res.data.userId);
+                        window.location.href='user_info.html';
+                    }else{
+                        $.cookie('driver_id',res.data.driverId);
+                        window.location.href='online_order.html';
+                    }
                 } else if (res.status === "fail") {
                     alert("登录失败：" + res.data.errMsg);
                 }

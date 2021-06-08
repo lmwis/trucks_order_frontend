@@ -18,7 +18,7 @@
     <script type="text/javascript">
         $(function () {
             let user_id = $.cookie('user_id');
-            if (user_id != 'undefined') {
+            if (user_id) {
                 $('#loginName').html(user_id);
             }
             var app = new Vue({
@@ -30,13 +30,36 @@
                         $("#content").attr("src", "user_login_page.html");
                     },
                     driverLogin: function () {
+                        $($(".layui-nav-item")[0]).removeClass("layui-this");
+                        $($(".layui-nav-item")[2]).addClass("layui-this");
                         $("#content").attr("src", "driver_login_page.html");
                     },
                     onlineOrderPage: function () {
+                        const user_id = $.cookie("user_id");
+                        if(!user_id){
+                            alert('请先登录用户');
+                            return;
+                        }
+                        $($(".layui-nav-item")[3]).addClass("layui-this");
                         $("#content").attr("src", "online_order.html");
                     },
                     myOrder: function () {
+                        const user_id = $.cookie("user_id");
+                        if(!user_id){
+                            alert('请先登录用户');
+                            return;
+                        }
+                        $($(".layui-nav-item")[4]).addClass("layui-this");
                         $("#content").attr("src", "my_center.html");
+                    },
+                    driverReceive: function () {
+                        const driver_id = $.cookie("driver_id");
+                        if(!driver_id){
+                            alert('请先登录司机');
+                            return;
+                        }
+                        $($(".layui-nav-item")[5]).addClass("layui-this");
+                        $("#content").attr("src", "driver_receive.html");
                     },
                     quitLogin: function () {
                         const r = confirm('确认退出当前用户？')
@@ -58,7 +81,7 @@
         <li class="layui-nav-item"><a href="#" v-on:click.stop="userLogin"><span>用户加入</span></a></li>
         <li class="layui-nav-item"><a href="#" v-on:click.stop="driverLogin"><span>司机加入</span></a></li>
         <li class="layui-nav-item"><a href="#" v-on:click.stop="onlineOrderPage"><span>在线下单</span></a></li>
-        <li class="layui-nav-item"><a href=""><span>司机接单</span></a></li>
+        <li class="layui-nav-item"><a href="#" v-on:click.stop="driverReceive"><span>司机接单</span></a></li>
     </ul>
     <ul class="self layui-nav" lay-filter="">
         <li class="layui-nav-item">

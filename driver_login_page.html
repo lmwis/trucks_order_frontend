@@ -16,11 +16,12 @@
     <script type="text/javascript" src="js/component.js"></script>
     <script type="text/javascript" src="js/common.js"></script>
     <script type="text/javascript" src="js/layui/layui.js"></script>
+    <script src="https://cdn.staticfile.org/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
     <script type="text/javascript">
         $(function () {
             const uploadUrl = Ajax.urlPre + 'imgs/upload_img';
             var app = new Vue({
-                el: "#register-form",
+                el: "#allForm",
                 data: {
                     name: "",
                     sex: "",
@@ -33,6 +34,8 @@
                     img5_path: "",
                     password: "",
                     passwordAgain: "",
+                    login_name:"",
+                    login_password:""
 
                 },
                 methods: {
@@ -46,8 +49,19 @@
                             return;
                         }
                         Ajax.driverRegister(this.name, this.sex, this.age, this.tel, this.img1_path, this.img2_path,
-                            this.img3_path, this.img4_path, this.img5_path, this.password, this.passwordAgain)
-
+                            this.img3_path, this.img4_path, this.img5_path, this.password, this.passwordAgain);
+                    },
+                    dLogin: function(){
+                        $.cookie('user_id', '', {expires: -1}); // 删除cookie
+                        $.cookie('driver_id', '', {expires: -1}); // 删除cookie
+                        if(this.login_name.length<=0 || this.login_password.length<=0){
+                            layui.use('layer', function(){
+                                var layer = layui.layer;
+                                layer.msg('不能为空');
+                            });
+                            return;
+                        }
+                        Ajax.login(this.login_name,this.login_password,'driver');
                     },
                     toLoginForm:function () {
                         $(".form_driver").fadeOut("default",function () {
@@ -191,7 +205,7 @@
     </script>
 </head>
 <body>
-<div class="body">
+<div class="body" id="allForm">
     <div class="background-img">
         <img src="images/页面3图片/背景图.jpg" width="100%" height="740px">
     </div>
@@ -293,23 +307,23 @@
                 </li>
                 <li>
                     <div class="input-group">
-                        <span class="input-group-addon" id="basic-addon6">请输入邮箱</span>
-                        <input type="email" class="form-control" placeholder="email" aria-describedby="basic-addon1" v-model="login_email">
+                        <span class="input-group-addon" id="basic-addon7">请输入姓名</span>
+                        <input type="text" class="form-control" placeholder="name" aria-describedby="basic-addon1" v-model="login_name">
                     </div>
                 </li>
                 <li>
                     <div class="input-group">
-                        <span class="input-group-addon" id="basic-addon7">请输入密码</span>
+                        <span class="input-group-addon" id="basic-addon8">请输入密码</span>
                         <input type="text" class="form-control" placeholder="password" aria-describedby="basic-addon1" v-model="login_password">
                     </div>
                 </li>
                 <li>
-                    <div class="btn-group register-button" role="group" aria-label="...">
-                        <button class="btn btn-default" type="button" value="登录" v-on:click="login">登录</button>
+                    <div  class="btn-group register-button" role="group" aria-label="...">
+                        <button v-on:click="dLogin" class="btn btn-default" type="button" value="登录">登录</button>
                     </div>
                 </li>
                 <li>
-                    <div style="font-size:18px;padding-top:10px;color:#000000" v-on:click="toRegisterForm"><a href="#" style="color:black">没有账号？点击注册</a></div>
+                    <div style="font-size:18px;padding-top:10px;color:#000000" ><a href="#" v-on:click.stop="toRegisterForm" style="color:black">没有账号？点击注册</a></div>
                 </li>
             </ul>
         </div>

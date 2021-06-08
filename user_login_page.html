@@ -65,6 +65,8 @@
                         Ajax.register(this.nickname,this.email,this.password,'user');
                     },
                     login:function () {
+                        $.cookie('user_id', '', {expires: -1}); // 删除cookie
+                        $.cookie('driver_id', '', {expires: -1}); // 删除cookie
                         if(this.login_email.length<=0 || this.login_password.length<=0){
                             layui.use('layer', function(){
                                 var layer = layui.layer;
@@ -72,7 +74,7 @@
                             });
                             return;
                         }
-                        Ajax.login(this.login_email,this.login_password);
+                        Ajax.login(this.login_email,this.login_password,'user');
                     },
                     toLoginForm:function () {
                         $(".form").fadeOut("default",function () {
