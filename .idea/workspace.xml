@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="150a5470-9429-4400-99d0-05f3507a276e" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/driver_receive.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/driver_login_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/driver_login_page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/driver_receive.html" beforeDir="false" afterPath="$PROJECT_DIR$/driver_receive.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/home_page.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/request.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/request.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user_login_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/user_login_page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_center.html" beforeDir="false" afterPath="$PROJECT_DIR$/my_center.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/online_order.html" beforeDir="false" afterPath="$PROJECT_DIR$/online_order.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,12 +38,6 @@
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsFlowSettings">
-    <service-enabled>true</service-enabled>
-    <exe-path />
-    <other-services-enabled>true</other-services-enabled>
-    <auto-save>true</auto-save>
-  </component>
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
@@ -101,7 +94,8 @@
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -124,7 +118,7 @@
       <workItem from="1623032535264" duration="9426000" />
       <workItem from="1623057343672" duration="4059000" />
       <workItem from="1623073571827" duration="1775000" />
-      <workItem from="1623128934727" duration="541000" />
+      <workItem from="1623128934727" duration="20076000" />
     </task>
     <servers />
   </component>
@@ -157,8 +151,12 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
+  <component name="VcsManagerConfiguration">
+    <option name="LAST_COMMIT_MESSAGE" value="" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/home_page.html">

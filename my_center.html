@@ -14,9 +14,12 @@
     <script type="text/javascript" src="js/component.js"></script>
     <script type="text/javascript" src="js/common.js"></script>
     <script type="text/javascript" src="js/layui/layui.js"></script>
+    <script src="https://cdn.staticfile.org/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
     <script type="text/javascript">
         $(function(){
-            var res = Ajax.getAllOrder();
+            const driver_id = $.cookie('driver_id');
+            var res = Ajax.getMyOrder(driver_id);
+            console.log(res);
             if(res.status!="success"){
                 layui.use('layer', function(){
                     var layer = layui.layer;
@@ -29,10 +32,10 @@
             $.each(data,function (i,order) {
                 context+='<td>';
                 context+='<ul>';
-                context+='<li>'+(order.name)+'</li>';
-                context+='<li>'+(order.name)+'</li>';
-                context+='<li>'+(order.name)+'</li>';
-                context+='<li>'+(order.name)+'</li>';
+                context+='<li>'+(order.itemDesc)+'</li>';
+                context+='<li>'+(order.linkmanName)+'</li>';
+                // context+='<li>'+(order.name)+'</li>';
+                // context+='<li>'+(order.name)+'</li>';
                 context+='</ul>';
                 context+='</td>';
             });

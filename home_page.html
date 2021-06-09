@@ -19,7 +19,11 @@
         $(function () {
             let user_id = $.cookie('user_id');
             if (user_id) {
-                $('#loginName').html(user_id);
+                $('#loginName').html(user_id + "(用户)");
+            }
+            let driver_id = $.cookie('driver_id');
+            if (driver_id) {
+                $('#loginName').html(driver_id + "(司机)");
             }
             var app = new Vue({
                 el: ".header",
@@ -36,7 +40,7 @@
                     },
                     onlineOrderPage: function () {
                         const user_id = $.cookie("user_id");
-                        if(!user_id){
+                        if (!user_id) {
                             alert('请先登录用户');
                             return;
                         }
@@ -44,9 +48,9 @@
                         $("#content").attr("src", "online_order.html");
                     },
                     myOrder: function () {
-                        const user_id = $.cookie("user_id");
-                        if(!user_id){
-                            alert('请先登录用户');
+                        const driver_id = $.cookie("driver_id");
+                        if (!driver_id) {
+                            alert('请先登陆司机');
                             return;
                         }
                         $($(".layui-nav-item")[4]).addClass("layui-this");
@@ -54,7 +58,7 @@
                     },
                     driverReceive: function () {
                         const driver_id = $.cookie("driver_id");
-                        if(!driver_id){
+                        if (!driver_id) {
                             alert('请先登录司机');
                             return;
                         }
@@ -63,7 +67,7 @@
                     },
                     quitLogin: function () {
                         const r = confirm('确认退出当前用户？')
-                        if(r){
+                        if (r) {
                             $.cookie('user_id', '', {expires: -1}); // 删除cookie
                             window.location.reload();
                         }

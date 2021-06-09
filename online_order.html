@@ -16,9 +16,11 @@
     <script type="text/javascript" src="js/layui/layui.js"></script>
     <script type="text/javascript">
         $(function(){
+            const uploadUrl = Ajax.urlPre + 'imgs/upload_img';
             var flag=-1;
             $(".truck_type tr td").click(function () {
                 flag=$(this)[0].cellIndex;
+                console.log(flag);
                 if(flag!=-1){
                     $.each($(".truck_type tr td"),function (i,item) {
                         if(i==flag);
@@ -45,17 +47,19 @@
                 },
                 methods:{
                     submitData:function () {
-                        if(this.flag<=-1||this.order_time==""||this.order_start==""||this.order_end==""||this.contact==""
-                        ||this.contact_tel==""||this.product_desc==""||this.price==""){
+                        this.flag = flag;
+                        this.order_img_path = imgPath;
+                        if(this.flag<=-1||this.order_time===""||this.order_start===""||this.order_end===""||this.contact===""
+                        ||this.contact_tel===""||this.product_desc===""||this.price===""){
                             layui.use('layer', function(){
                                 var layer = layui.layer;
                                 layer.msg('不能为空');
                                 return ;
                             });
-                            console.log(imgPath);
-                            // Ajax.publicOrder(this.item_volume,this.order_img_path,this.flag,this.order_time,this.order_start,this.order_end,this.contact,this.contact_tel,
-                            //     this.product_desc,this.price);
                         }
+                        console.log(imgPath);
+                        Ajax.publicOrder(this.item_volume,this.order_img_path,this.flag,this.order_time,this.order_start,this.order_end,this.contact,this.contact_tel,
+                            this.product_desc,this.price,this.order_time_line);
                     }
                 }
             });
@@ -64,7 +68,7 @@
                 //执行实例
                 var uploadInst = upload.render({
                     elem: '#productImgUpload' //绑定元素
-                    ,url: '/upload/img' //上传接口
+                    ,url: uploadUrl //上传接口
                     ,done: function(res){//上传完毕回调
                         if(res.status=="success"){
                             imgPath = res.data;
