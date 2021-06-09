@@ -16,31 +16,144 @@
     <script type="text/javascript" src="js/layui/layui.js"></script>
     <script src="https://cdn.staticfile.org/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
     <script type="text/javascript">
-        $(function(){
-            const driver_id = $.cookie('driver_id');
-            var res = Ajax.getMyOrder(driver_id);
-            console.log(res);
-            if(res.status!="success"){
-                layui.use('layer', function(){
-                    var layer = layui.layer;
-                    layer.msg(res.data.errMsg);
-                });
-                return;
-            }
-            var data = res.data;
-            var context='';
-            $.each(data,function (i,order) {
-                context+='<td>';
-                context+='<ul>';
-                context+='<li>'+(order.itemDesc)+'</li>';
-                context+='<li>'+(order.linkmanName)+'</li>';
-                // context+='<li>'+(order.name)+'</li>';
-                // context+='<li>'+(order.name)+'</li>';
-                context+='</ul>';
-                context+='</td>';
+        $(function () {
+            let layer;
+            let layerIndex;
+            layui.use('layer', function () {
+                layer = layui.layer;
             });
-            console.log(context);
-            $("#orders").html(context);
+            const app = new Vue({
+                el: "#right",
+                data: {
+                    orderList: [],
+                    current_truck_type_img: '',
+                    current_truck_type_str: '',
+                    current_img: '',
+                    current_item_volume: '',
+                    current_order_time: '',
+                    current_order_time_line: '',
+                    current_order_start: '',
+                    current_order_end: '',
+                    current_contact: '',
+                    current_contact_tel: '',
+                    current_product_desc: '',
+                    current_price: '',
+                    current_order:0
+                },
+                methods: {
+                    cancelOrder:function (){
+                        console.log(this.current_order);
+                        const driver_id = $.cookie('driver_id');
+                        if(!driver_id){
+                            alert('登陆状态失效，请重新登陆')
+                            window.local.href="my_center.html";
+                            return ;
+                        }
+
+                        const res = Ajax.cancelOrder(driver_id,this.current_order);
+                        if(res.status==='success'){
+                            alert('取消订单成功');
+                            layer.close(layerIndex);
+                            window.location.href="my_center.html";
+                        }else{
+                            alert('取消订单失败');
+                        }
+                    },
+                    finishOrder:function (){
+                        console.log(this.current_order);
+                        const driver_id = $.cookie('driver_id');
+                        if(!driver_id){
+                            alert('登陆状态失效，请重新登陆')
+                            window.local.href="home_page_index.html";
+                            return ;
+                        }
+
+                        const res = Ajax.finishOrder(this.current_order);
+                        if(res.status==='success'){
+                            alert('完成订单成功');
+                            layer.close(layerIndex);
+                            window.location.href="my_center.html";
+                        }else{
+                            alert('完成订单失败');
+                        }
+                    },
+                    preReceive: function (e) {
+                        let orderInfo;
+
+                        $.each(this.orderList, function (i, order) {
+                            $.each(order, function (i, o) {
+                                if (o.orderId === e) {
+                                    orderInfo = o;
+                                }
+                            });
+                        });
+                        this.current_order = orderInfo.orderId;
+                        switch (orderInfo.carType) {
+                            case 0:
+                                this.current_truck_type_img = `images/页面4图片/图片1.png`;
+                                this.current_truck_type_str = '小面包车';
+                                break;
+                            case 1:
+                                this.current_truck_type_img = `images/页面4图片/图片2.png`;
+                                this.current_truck_type_str = '中面包车';
+                                break;
+                            case 2:
+                                this.current_truck_type_img = `images/页面4图片/图片3.png`;
+                                this.current_truck_type_str = '小货车';
+                                break;
+                            case 3:
+                                this.current_truck_type_img = `images/页面4图片/图片4.png`;
+                                this.current_truck_type_str = '中货车';
+                                break;
+                            case 4:
+                                this.current_truck_type_img = `images/页面4图片/图片5.png`;
+                                this.current_truck_type_str = '大卡车';
+                                break;
+                        }
+                        this.current_img = orderInfo.itemImgPath;
+                        this.current_item_volume = orderInfo.itemVolume;
+                        this.current_order_time = orderInfo.orderTime
+                        this.current_order_time_line = orderInfo.orderTimeline;
+                        this.current_order_start = orderInfo.orderStartPosition;
+                        this.current_order_end = orderInfo.orderEndPosition;
+                        this.current_contact = orderInfo.linkmanName;
+                        this.current_contact_tel = orderInfo.linkmanTel;
+                        this.current_product_desc = orderInfo.itemDesc;
+                        this.current_price = orderInfo.price
+                        layerIndex = layer.open({
+                            type: 1,
+                            title: '详细信息',
+                            content: $('#layer'),//注意，如果str是object，那么需要字符拼接。
+                            area: '500px'
+                        });
+
+                    }
+                },
+                mounted: function () {
+                    const driver_id = $.cookie('driver_id');
+                    var res = Ajax.getMyOrder(driver_id);
+                    if (res.status !== "success") {
+                        layui.use('layer', function () {
+                            var layer = layui.layer;
+                            layer.msg(res.data.errMsg);
+                        });
+                        return;
+                    }
+                    const data = res.data;
+                    let temp = [];
+                    const list = this.orderList;
+                    $.each(data, function (i, order) {
+                        if (i > 0 && i % 5 === 0) {
+                            list.push(temp);
+                            temp = [];
+                        }
+                        temp.push(order);
+                    });
+                    list.push(temp);
+                    this.orderList = list;
+                    // console.log(this.orderList)
+                }
+            });
         });
     </script>
     <style rel="stylesheet">
@@ -100,15 +213,124 @@
         <hr style="height:5px" >
     </div>
 </div>
-<div class="right">
+<div class="right" id="right">
     <div class="right-top">
-        <table id="orders">
-            <tr>
-
+        <table border="1" id="orders">
+            <tr v-for='item in orderList'>
+                <td v-for="items in item">
+                    <ul>
+                        <li><img width="200px" height="200px" :src="items.itemImgPath"/></li>
+                        <li>备注：{{items.itemDesc}}</li>
+                        <li>联系人：{{items.linkmanName}}</li>
+                        <li>起始地：{{items.orderStartPosition}} - {{items.orderEndPosition}}</li>
+                        <li>价格：{{items.price}}</li>
+                        <li>状态：{{items.status===1?'未完成':'已完成'}}</li>
+                        <li>
+                            <div class="btn-group register-button" role="group" aria-label="...">
+                                <button class="btn btn-default" type="button" v-on:click="preReceive(items.orderId)"
+                                        value="">查看
+                                </button>
+                            </div>
+                        </li>
+                    </ul>
+                </td>
             </tr>
         </table>
     </div>
     <hr>
+    <div id="layer" style="display: none" class="right">
+        <div class="right-top">
+            <table class="truck_type">
+                <tr>
+                    <td><img :src="current_truck_type_img" alt="" width="170px" height="128px"></td>
+                </tr>
+                <tr>
+                    <td><span>{{current_truck_type_str}}</span></td>
+                </tr>
+            </table>
+        </div>
+        <hr>
+        <div class="right-context">
+            <div class="right-info">
+                <ul>
+                    <li>
+                        <img :src="current_img" alt="" width="200px" height="200px">
+                    </li>
+                    <li>
+                        <div class="input-group">
+                            <span class="input-group-addon" id="basic-addon6">单位货物体积(长x宽x高)</span>
+                            <input type="text" class="form-control" disabled :value="current_item_volume"
+                                   placeholder="单位货物体积(长x宽x高)" aria-describedby="basic-addon1">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="input-group">
+                            <span class="input-group-addon" id="basic-addon1">货运时间</span>
+                            <input type="text" class="form-control" disabled :value="current_order_time"
+                                   placeholder="货运时间" aria-describedby="basic-addon1">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="input-group">
+                            <span class="input-group-addon" id="basic-addon7">货运期限</span>
+                            <input type="text" class="form-control" disabled :value="current_order_time_line"
+                                   placeholder="货运时间" aria-describedby="basic-addon1">
+                        </div>
+                    </li>
+                    <li>
+                    <li>
+                        <div class="input-group">
+                            <span class="input-group-addon" id="basic-addon2">货运起点和终点</span>
+                            <input type="text" class="form-control" disabled :value="current_order_start"
+                                   placeholder="起点" aria-describedby="basic-addon1">
+                            <input type="text" class="form-control" disabled :value="current_order_end"
+                                   placeholder="终点" aria-describedby="basic-addon1">
+                        </div>
+                    </li>
+                    </li>
+                    <li>
+                        <div class="input-group">
+                            <span class="input-group-addon" id="basic-addon3">联系人称呼</span>
+                            <input type="text" class="form-control" disabled :value="current_contact"
+                                   placeholder="称呼" aria-describedby="basic-addon1">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="input-group">
+                            <span class="input-group-addon" id="basic-addon4">联系人电话</span>
+                            <input type="text" class="form-control" disabled :value="current_contact_tel"
+                                   placeholder="电话" aria-describedby="basic-addon1">
+                        </div>
+                    </li>
+                    <li>
+                        货物说明 <br>
+                        <textarea name="" id="" cols="30" rows="3" disabled :value="current_product_desc"
+                        ></textarea>
+                    </li>
+                    <li>
+                        <div class="input-group">
+                            <span class="input-group-addon" id="basic-addon5">价格</span>
+                            <input type="text" class="form-control" disabled :value="current_price" placeholder="价格"
+                                   aria-describedby="basic-addon1">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="btn-group register-button" role="group" aria-label="...">
+                            <button class="btn btn-default" type="button" v-on:click.stop="cancelOrder" value="取消领取">取消领取
+                            </button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="btn-group register-button" role="group" aria-label="...">
+                            <button class="btn btn-default" type="button" v-on:click.stop="finishOrder" value="取消领取">完成订单
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
 </div>
 
 </body>

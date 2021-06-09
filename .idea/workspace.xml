@@ -7,7 +7,6 @@
       <change beforePath="$PROJECT_DIR$/home_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/home_page.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/request.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/request.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my_center.html" beforeDir="false" afterPath="$PROJECT_DIR$/my_center.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/online_order.html" beforeDir="false" afterPath="$PROJECT_DIR$/online_order.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,7 +117,7 @@
       <workItem from="1623032535264" duration="9426000" />
       <workItem from="1623057343672" duration="4059000" />
       <workItem from="1623073571827" duration="1775000" />
-      <workItem from="1623128934727" duration="20076000" />
+      <workItem from="1623128934727" duration="21900000" />
     </task>
     <servers />
   </component>

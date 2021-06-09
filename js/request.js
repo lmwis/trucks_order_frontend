@@ -93,10 +93,10 @@ var Ajax = {
                     alert("登录成功");
                     if(type === 'user'){
                         $.cookie('user_id',res.data.userId);
-                        window.location.href='user_info.html';
+                        window.location.href='online_order.html';
                     }else{
                         $.cookie('driver_id',res.data.driverId);
-                        window.location.href='order_receive.html';
+                        window.location.href='driver_receive.html';
                     }
                 } else if (res.status === "fail") {
                     alert("登录失败：" + res.data.errMsg);
@@ -189,6 +189,43 @@ var Ajax = {
     },
     receiveOrder:function (driver_id,order_id){
         var url = this.urlPre + "driver/addOrder";
+        let r = {};
+        $.ajax({
+            type: "GET",
+            url: url,
+            data: {
+                driver_id,
+                order_id
+            },
+            //处理跨域请求
+            async: false,
+            xhrFields: {withCredentials: true},
+            success: function (res) {
+                r = res;
+            }
+        });
+        return r;
+    },
+    finishOrder:function (order_id){
+        var url = this.urlPre + "driver/finishOrder";
+        let r = {};
+        $.ajax({
+            type: "GET",
+            url: url,
+            data: {
+                order_id
+            },
+            //处理跨域请求
+            async: false,
+            xhrFields: {withCredentials: true},
+            success: function (res) {
+                r = res;
+            }
+        });
+        return r;
+    },
+    cancelOrder:function (driver_id,order_id){
+        var url = this.urlPre + "driver/cancelOrder";
         let r = {};
         $.ajax({
             type: "GET",

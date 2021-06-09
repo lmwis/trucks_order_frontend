@@ -69,6 +69,7 @@
                         const r = confirm('确认退出当前用户？')
                         if (r) {
                             $.cookie('user_id', '', {expires: -1}); // 删除cookie
+                            $.cookie('driver_id', '', {expires: -1}); // 删除cookie
                             window.location.reload();
                         }
                     }
